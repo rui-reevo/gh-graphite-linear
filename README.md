@@ -26,3 +26,7 @@ Works for any GitHub org and repo — nothing is hardcoded.
 5. Open any GitHub PR page — a **Graphite** pill appears next to the PR number.
 
 To update after editing files, click the refresh icon on the extension card.
+
+## Icons
+
+PNG icons follow Chrome’s recommended sizes: **16**, **32**, **48**, and **128**. The 128×128 asset keeps ~16px transparent padding so the artwork sits near 96×96 for Web Store visual weight.
