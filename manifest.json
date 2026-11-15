@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Bi-Link",
-  "version": "2.1.0",
+  "name": "Graphite ↔ GitHub",
+  "version": "2.1.1",
   "description": "Bidirectional bridge between Graphite and GitHub pull requests — open either side from the other.",
   "content_scripts": [
     {
