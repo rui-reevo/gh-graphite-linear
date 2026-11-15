@@ -26,13 +26,17 @@ const EXTERNAL_ARROW =
   "</svg>";
 
 // The visible "#123" span in the PR header — we insert the button right after
-// it. GitHub used to render it inside the title h1 and now renders it in a
-// sibling suffix span, so we search the h1's container rather than the h1
-// itself. The h1's data-component attribute is stable; the surrounding CSS
-// module class names are hashed per deploy, so we don't rely on them.
+// it. GitHub's redesigned PR page moved the number into a sticky mini-header
+// (`span.fgColor-muted` whose text is "#digits"). Older layouts kept it near
+// the title h1 (`PH_Title` or `Heading`). CSS module class hashes change per
+// deploy, so we match on the stable utility class + text shape.
 function findAnchor() {
+  for (const el of document.querySelectorAll(".fgColor-muted")) {
+    if (/^#\d+$/.test(el.textContent?.trim() || "")) return el;
+  }
+
   const titleArea = document.querySelector(
-    'h1[data-component="PH_Title"]'
+    'h1[data-component="PH_Title"], h1[data-component="Heading"]'
   )?.parentElement;
   return titleArea?.querySelector(".fgColor-muted") || null;
 }

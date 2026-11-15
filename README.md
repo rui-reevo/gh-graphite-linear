@@ -1,4 +1,4 @@
-# Graphite ↔ GitHub PR
+# Bi-Link
 
 A tiny Chrome extension that adds cross-links between Graphite and GitHub PR pages — one button in each direction.
 
