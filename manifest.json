@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Graphite ↔ GitHub PR",
-  "version": "2.0.0",
-  "description": "Bidirectional bridge: adds an 'Open on GitHub' button to Graphite PR pages and an 'Open on Graphite' button to GitHub PR pages.",
+  "name": "Bi-Link",
+  "version": "2.1.0",
+  "description": "Bidirectional bridge between Graphite and GitHub pull requests — open either side from the other.",
   "content_scripts": [
     {
       "matches": ["https://app.graphite.com/*"],
